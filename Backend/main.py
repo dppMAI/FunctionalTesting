@@ -1,10 +1,37 @@
 import psutil
 import time
 import requests
+import pymysql
 
 
 def testing_test_in_test(host, port, user, password, database):
-    return
+    try:
+        # Подключение к базе данных
+        connection = pymysql.connect(
+            host=host,
+            port=port,
+            user=user,
+            password=password,
+            database=database,
+            charset='utf8mb4',
+            cursorclass=pymysql.cursors.DictCursor
+        )
+
+        # Создание курсора для выпол��ения SQL-запросов
+        with connection.cursor() as cursor:
+            # Ваш код тестирования здесь
+            # Например, выполнение простого SQL-запроса
+            cursor.execute("SELECT * FROM your_table LIMIT 1")
+            result = cursor.fetchone()
+            print(result)  # Вывод результата
+
+    except Exception as e:
+        print(f"Ошибка: {e}")
+
+    finally:
+        # Важно закрывать соединение после использования
+        if connection:
+            connection.close()
 
 def page_testing():
     host = request.args.get('host')
