@@ -1,0 +1,53 @@
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    color: black;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label[for="file"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.output {
+    margin-top: 20px;
+}
+
+#result {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
