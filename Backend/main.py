@@ -2,6 +2,19 @@ import psutil
 import time
 import requests
 
+
+def testing_test_in_test(host, port, user, password, database):
+    return
+
+def page_testing():
+    host = request.args.get('host')
+    port = request.args.get('port')
+    user = request.args.get('user')
+    password = request.args.get('password')
+    database = request.args.get('database')
+    print(database)
+    testing_test_in_test(host, port, user, password, database)
+
 url = "http://example.com"
 disk_io_counters = psutil.disk_io_counters()
 network_io_counters = psutil.net_io_counters()
